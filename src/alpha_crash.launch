@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find icart_mini_gazebo)/launch/icart_mini.launch">
+        <arg name="model" value="$(find xacro)/xacro.py '$(find orne_description)/urdf/orne_alpha.xacro'"/>
+    </include>
+    <include file="$(find orne_bringup)/launch/includes/base.launch.xml"/>
+	<node name= "alpha_crash" pkg= "practice" type= "alpha_crash" />
+</launch>
